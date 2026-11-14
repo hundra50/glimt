@@ -1,0 +1,49 @@
+{
+  "name": "glimt",
+  "productName": "Glimt",
+  "version": "0.1.0",
+  "description": "En smart docka för Windows 11 med mediaspelare och systemwidgets",
+  "author": "Glimt",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "se.glimt.dock",
+    "productName": "Glimt",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**",
+      "helper/**",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "helper/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Glimt",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    }
+  },
+  "devDependencies": {
+    "electron": "^45.3.0",
+    "electron-builder": "^26.18.0"
+  }
+}

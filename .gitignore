@@ -1,0 +1,14 @@
+# Dependencies (restored with `npm install`)
+node_modules/
+
+# Build output: the installer is attached to a GitHub Release instead
+dist/
+
+# Logs
+*.log
+
+# Editor / OS clutter
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

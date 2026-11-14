@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>Glimt – Inställningar</title>
+<link rel="stylesheet" href="settings.css">
+</head>
+<body>
+<header class="titlebar"><span class="logo"></span>Glimt</header>
+<div class="shell">
+  <nav class="side" aria-label="Avsnitt">
+    <button data-tab="widgets"><span class="i" data-icon="widgets"></span>Widgets</button>
+    <button data-tab="look"><span class="i" data-icon="palette"></span>Utseende</button>
+    <button data-tab="apps"><span class="i" data-icon="apps"></span>Appar</button>
+    <button data-tab="media"><span class="i" data-icon="music"></span>Media</button>
+    <button data-tab="general"><span class="i" data-icon="sliders"></span>Allmänt</button>
+    <button data-tab="about"><span class="i" data-icon="info"></span>Om Glimt</button>
+  </nav>
+  <main id="main"></main>
+</div>
+<script src="icons.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>
